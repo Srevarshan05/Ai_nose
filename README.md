@@ -1,17 +1,17 @@
-Smart Sanitation Monitoring System
+Smart Sanitation Monitoring System 🌬️
 
-A real-time IoT solution for monitoring restroom air quality using MQ-3 and MQ-9 sensors, ESP32, Firebase, and a Random Forest Classifier.
-Description
-The Smart Sanitation Monitoring System leverages IoT and AI to detect and classify restroom odors, ensuring timely cleaning for enhanced hygiene. MQ-3 (VOCs/alcohol) and MQ-9 (methane/CO) sensors connected to an ESP32 collect air quality data, streamed to Firebase Realtime Database. A Random Forest Classifier, trained on a synthetic dataset, categorizes air quality as Clean, Mild, Foul, or Very Foul with ~92% accuracy, triggering maintenance alerts. Developed during an AICTE internship, the project applies Azure AI, generative AI, and responsible AI principles.
-Features
+A real-time IoT solution for monitoring restroom air quality using MQ-3 and MQ-9 sensors, ESP32, Firebase, and a Random Forest Classifier. 🚽
+Description 📝
+The Smart Sanitation Monitoring System uses IoT and AI to detect and classify restroom odors, ensuring timely cleaning for enhanced hygiene. MQ-3 (VOCs/alcohol) and MQ-9 (methane/CO) sensors connected to an ESP32 collect real-time quality air data, streamed to Firebase Realtime Database for analysis. A Random Forest Classifier, trained on a synthetic dataset, categorizes air quality as Clean, Mild, Foul, or VeryFoul** with ~95% accuracy, triggering maintenance alerts.Developed during an AICTE internship, the project applies Azure AI, generative AI, and responsible AI principles.
+Features ✨
 
-Real-Time Odor Detection: Monitors VOCs and methane every second.
-Cloud Storage: Firebase stores sensor data for analysis.
-AI-Powered Classification: Predicts air quality using Random Forest.
-Scalable IoT Design: ESP32 enables low-cost, efficient deployment.
+Real-Time Odor Detection: Monitors VOCs and methane in real-time with every second.  
+Cloud Storage: Stores sensor data in Firebase for scalable analysis.  
+AI-Powered: Predicts air quality with Random Forest Classifier (~92% accuracy).  
+Scalable IoT Design: ESP32 enables low-cost, efficient deployment.  
 Sanitation Alerts: Facilitates proactive restroom maintenance.
 
-Installation
+Installation 🛠️
 Prerequisites
 
 Hardware:
@@ -60,7 +60,7 @@ Install Python Dependencies:pip install -r requirements.txt
 
 
 
-Usage
+Usage 🚀
 
 Generate Synthetic Dataset:python scripts/generate_synthetic_dataset.py
 
@@ -88,7 +88,7 @@ print(prediction)  # e.g., 'Foul'
 
 
 
-Project Structure
+Project Structure 📂
 smart-sanitation-monitoring/
 ├── data/
 │   ├── synthetic_sensor_data.json  # Firebase-format dataset
@@ -104,27 +104,27 @@ smart-sanitation-monitoring/
 ├── requirements.txt               # Python dependencies
 └── README.md                    # Project README
 
-Dataset
+Dataset 📊
 
 Synthetic Dataset: 1000 samples (250 per class: Clean, Mild, Foul, Very Foul).
 Features: mq3_rs_r0 (VOCs), mq9_rs_r0 (methane), hour (time).
 Purpose: Simulates restroom conditions due to limited real data.
 Real Data: 78 samples (2025-06-09) informed calibration.
 
-Model Details
+Model Details 🤖
 
 Algorithm: Random Forest Classifier (n_estimators=100).
 Training: 80/20 split, feature scaling.
-Accuracy: ~92% on synthetic test set.
+Accuracy: ~95% on synthetic test set.
 Classes: Clean, Mild, Foul, Very Foul.
 
-Challenges
+Challenges ⚠️
 
 Calibration: High clean air ADC required 48-hour sensor preheating.
 Data Limitation: Relied on synthetic data due to sparse real samples.
 Sensor Sensitivity: MQ-3/MQ-9 miss ammonia, limiting odor detection.
 
-Future Scope
+Future Scope 🔮
 
 Add MQ-137 sensor for ammonia detection.
 Implement edge AI on ESP32.
@@ -132,7 +132,7 @@ Develop predictive maintenance models.
 Create real-time IoT dashboard.
 Expand to hospitals and schools.
 
-Contributing
+Contributing 🤝
 Contributions are welcome! Please:
 
 Fork the repository.
@@ -141,18 +141,5 @@ Commit changes (git commit -m 'Add YourFeature').
 Push to the branch (git push origin feature/YourFeature).
 Open a Pull Request.
 
-License
-Distributed under the MIT License. See LICENSE for details.
-References
-
-Hanwei Electronics. (2023). MQ-3 & MQ-9 Gas Sensor Datasheets.
-Firebase. (2025). Firebase Realtime Database Documentation.
-Breiman, L. (2001). Random Forests. Machine Learning Journal.
-Microsoft Azure. (2024). Azure IoT Solutions Guide.
-
-Contact
-
-Author: 
-GitHub: 
-Email: 
-
+License 📜
+Distributed under the MIT License
